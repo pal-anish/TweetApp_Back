@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tweetapp.TweerAppApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.669 s - in com.tweetapp.TweerAppApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.304 s - in com.tweetapp.TweerAppApplicationTests
