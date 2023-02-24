@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tweetapp.exception.UserNotFoundException;
 import com.tweetapp.facade.UsersFacade;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/")
 public class UserController {
