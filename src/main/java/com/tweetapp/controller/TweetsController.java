@@ -24,7 +24,7 @@ import com.tweetapp.payload.request.TweetRequest;
 import com.tweetapp.payload.response.MessageResponse;
 import com.tweetapp.payload.response.TweetResponseList;
 
-@CrossOrigin(origins = "http://ec2-18-212-55-150.compute-1.amazonaws.com:3000")
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/")
 public class TweetsController {

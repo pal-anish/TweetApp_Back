@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "a9c637d0-885e-44aa-8437-c9ee26fdf00a",
+		"name": "TweetApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register as New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Daksharaj\",\r\n    \"lastName\": \"Kamal\",\r\n    \"email\": \"daksharajkamal111@gmail.com\",\r\n    \"username\": \"mrrajput\",\r\n    \"password\": \"sample@123\",\r\n    \"contactNumber\": \"+91-8533993338\",\r\n    \"roles\": [\"admin\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"mrrajput\",\r\n    \"password\": \"sample@123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/sampleuser01/forgot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"sampleuser01",
+						"forgot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Tweets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtcnJhanB1dCIsImlhdCI6MTY1OTI3MzcxNywiZXhwIjoxNjU5MzYwMTE3fQ.YGRpsGJNtBHe0HSZM997R4nx_TV1ntbsVal1RYqeImg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtcnJhanB1dCIsImlhdCI6MTY1OTMzMjA0MCwiZXhwIjoxNjU5NDE4NDQwfQ._-Kzs7Ooelltjz_UIwl2mFuwZsK_H0YmZQhfeUxaHik",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/users/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search By Username",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtcnJhanB1dCIsImlhdCI6MTY1OTM1MDQ2NCwiZXhwIjoxNjU5NDM2ODY0fQ.iOMxU2e01rMAi4HVGG3A5jpcel3VDHPerqJ-8d69d04",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/user/search/mr",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"user",
+						"search",
+						"mr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Tweets from User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW1wbGV1c2VyMDAiLCJpYXQiOjE2NTkzNzM2MDksImV4cCI6MTY1OTQ2MDAwOX0.N2jS62wqZuRe4UITYf1VPmMfYiPFmeZVGkziHz2sJCg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetString\": \"Sample tweet for testing - 00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/sampleuser00",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"sampleuser00"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post new Tweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW1wbGV1c2VyMDAiLCJpYXQiOjE2NTkzNzM2MDksImV4cCI6MTY1OTQ2MDAwOX0.N2jS62wqZuRe4UITYf1VPmMfYiPFmeZVGkziHz2sJCg",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetString\": \"Sample tweet for testing - 00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/sampleuser00/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"sampleuser00",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Tweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtcnJhanB1dCIsImlhdCI6MTY1OTI3NTY1MiwiZXhwIjoxNjU5MzYyMDUyfQ.L7XnhEW4H-wxSV37CFa4wjF2OdVIJBDtYaDhTa6wM7E",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetString\": \"Sample tweet for testing - 00 - Udpated by ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/mrrajput/update/62e68925cccf8034793b55ad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"mrrajput",
+						"update",
+						"62e68925cccf8034793b55ad"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tweet",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtcnJhanB1dCIsImlhdCI6MTY1OTI3NzUzNSwiZXhwIjoxNjU5MzYzOTM1fQ.MIFhs0tCj0adWnx8_WZHIrW6dQ4q2UG5SBHMZJSeSbs",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/mrrajput/delete/62e68c1f6ebb51413f5374dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"mrrajput",
+						"delete",
+						"62e68c1f6ebb51413f5374dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like Tweet",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW1wbGV1c2VyMDAiLCJpYXQiOjE2NTkzMjk1MjEsImV4cCI6MTY1OTQxNTkyMX0.2WsDFCSucROAqyfBS3sJXnkZGNw4OizgUSXnhaUPw4c",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/sampleuser00/like/62e752baec20d1138da1493b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"sampleuser00",
+						"like",
+						"62e752baec20d1138da1493b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reply to Tweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYW1wbGV1c2VyMDEiLCJpYXQiOjE2NTk0MzgyODMsImV4cCI6MTY1OTUyNDY4M30.Kn45XsAkHsgJXSkjlUiC2j2IsiWIx2F4CldyjVD3yF8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetString\": \"Sample Re-tweet for testing - 00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/v1.0/tweets/sampleuser01/reply/62e8cbf7cdface2462c59727",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1.0",
+						"tweets",
+						"sampleuser01",
+						"reply",
+						"62e8cbf7cdface2462c59727"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
